@@ -11,7 +11,7 @@
                         <div class="card-body">
                             <h4 class="card-title">{{ $task['name'] }}</h4>
                             <small>Deadline: {{ \Carbon\Carbon::parse($task['deadline'])->diffForHumans() }}</small> <br>
-                            <span class="badge bg-warning">{{ $task['status'] }}</span>
+                            <span class="badge bg-warning">{{ $task['status->name'] }}</span>
                             <p class="card-text">{{ Str::limit($task['description'], 40, '...') }}</p>
 
                             <div class="mt-2">
